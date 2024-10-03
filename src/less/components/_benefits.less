@@ -1,0 +1,44 @@
+@import "../mixins/_responsive";
+@import "../variables/_colors";
+
+.benefits {
+  background-color: @color-gray;
+  padding: 4rem 0;
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+    .media-desktop({
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    });
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &::before {
+      content: "";
+      height: 1.2rem;
+      width: 1.2rem;
+      background: linear-gradient(#eee9d7, #ffcf23);
+      display: block;
+      border-radius: 50%;
+    }
+  }
+
+  &__description {
+    color: lighten(@color-black, 20%);
+    font-size: 1rem;
+  }
+}

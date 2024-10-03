@@ -1,0 +1,28 @@
+@screen-phone: 480px;
+@screen-tablet: 744px;
+@screen-desktop: 1024px;
+@screen-desktop-wide: 1440px;
+
+.media-desktop-wide(@rules) {
+  @media screen and (min-width: @screen-desktop-wide) {
+    @rules();
+  }
+}
+
+.media-desktop(@rules) {
+  @media screen and (min-width: @screen-desktop) {
+    @rules();
+  }
+}
+
+.media-tablet(@rules) {
+  @media screen and (min-width: @screen-tablet) {
+    @rules();
+  }
+}
+
+.media-phone(@rules) {
+  @media screen and (max-width: @screen-phone) {
+    @rules();
+  }
+}
